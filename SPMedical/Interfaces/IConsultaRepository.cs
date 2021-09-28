@@ -9,7 +9,7 @@ namespace SPMedical.Interfaces
     interface IConsultaRepository
     {
         List<Consulta> ListarTodos();
-        Consulta BuscarPorId(int idUsuario);
+        Consulta BuscarPorId(int idConsulta);
         void Cadastrar(Consulta novoConsulta);
         void AtualizarIdCorpo(Consulta consultaAtualizada);
         void AtualizarIdUrl(int idConsulta, Consulta consultaAtualizada);
