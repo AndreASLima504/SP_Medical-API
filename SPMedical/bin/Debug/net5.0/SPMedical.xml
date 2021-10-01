@@ -4,5 +4,13 @@
         <name>SPMedical</name>
     </assembly>
     <members>
+        <member name="M:SPMedical.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Este método vai validar o usuário e logá-lo no sistema
+            </summary>
+            <param name="email">email do usuario</param>
+            <param name="senha">senha do usuario</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
