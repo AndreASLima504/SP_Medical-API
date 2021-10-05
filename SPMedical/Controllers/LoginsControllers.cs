@@ -17,9 +17,9 @@ namespace SPMedical.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class LoginsControllers : ControllerBase
     {
-        public LoginController()
+        public LoginsControllers()
         {
             _usuarioRepository = new UsuarioRepository();
         }

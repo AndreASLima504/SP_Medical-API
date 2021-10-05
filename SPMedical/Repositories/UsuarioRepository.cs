@@ -16,29 +16,47 @@ namespace SPMedical.Repositories
             throw new NotImplementedException();
         }
 
-        public void AtualizarIdUrl(int idUsuario, Usuario usuarioAtualizada)
+        public void AtualizarIdUrl(int idUsuario, Usuario usuarioAtualizado)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(idUsuario);
+            //verifica se o novo nome do Usuario não é nulo
+            if(usuarioAtualizado.Nome != null)
+            {
+                //se não for nulo (inválido), atualiza
+                usuarioBuscado.Nome = usuarioAtualizado.Nome;
+            }
+
+            if(usuarioAtualizado.Senha != null)
+            {
+                usuarioBuscado.Senha = usuarioAtualizado.Senha;
+            }
+
+            contexto.Usuarios.Update(usuarioBuscado);
+            contexto.SaveChanges();
         }
 
         public Usuario BuscarPorId(int idUsuario)
         {
-            throw new NotImplementedException();
+            return contexto.Usuarios.FirstOrDefault(U => U.UsuarioId == idUsuario);
         }
 
         public void Cadastrar(Usuario novoUsuario)
         {
-            throw new NotImplementedException();
+            contexto.Usuarios.Add(novoUsuario);
+            contexto.SaveChanges();
         }
 
         public void Deletar(int idUsuario)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(idUsuario);
+            contexto.Usuarios.Remove(usuarioBuscado);
+            contexto.SaveChanges();
         }
 
         public List<Usuario> ListarTodos()
         {
-            throw new NotImplementedException();
+            //retorna lista com todos os usuários
+            return contexto.Usuarios.ToList();
         }
 
         public Usuario Login(string email, string senha)
