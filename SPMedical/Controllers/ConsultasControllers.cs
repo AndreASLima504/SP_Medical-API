@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SPMedical.Domains;
 using SPMedical.Interfaces;
 using SPMedical.Repositories;
@@ -30,6 +31,7 @@ namespace SPMedical.Controllers
             return Ok(_consultaRepository.BuscarPorId(idConsulta));
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Consulta novoConsulta)
         {

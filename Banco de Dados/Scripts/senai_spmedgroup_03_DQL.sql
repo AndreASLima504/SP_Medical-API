@@ -1,4 +1,4 @@
-select * from Usuarios
+select * from Usuario
 select*from TipoUsuario
 select*from Medico
 select*from Paciente
