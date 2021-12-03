@@ -1,0 +1,11 @@
+- diagrama exportado do SSMS
+- documentação
+- exportar os dados para um arquivo .sql
+- exportar os dados para uma arquivo .csv
+- Select que mostra a quantidade de usuários do sistema
+- calcular idade do paciente
+- item 12 do escopo
+
+
+
+- item 10
