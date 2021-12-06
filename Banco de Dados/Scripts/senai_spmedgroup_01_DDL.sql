@@ -112,6 +112,8 @@ horarioFechamento time,
 horarioAbertura time);
 GO
 
+
+
 DELETE FROM Usuarios
 WHERE usuarioID >=13
 GO

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,6 +13,7 @@ namespace SPMedical.Domains
             Consulta = new HashSet<Consulta>();
         }
 
+        [Required(ErrorMessage = "Um médico válido é necessário para fazer esta operação")]
         public int MedicoId { get; set; }
         public int? EspecialidadeId { get; set; }
         public int? UsuarioId { get; set; }

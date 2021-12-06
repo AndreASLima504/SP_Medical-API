@@ -34,8 +34,9 @@ namespace SPMedical.Repositories
 
         public void Cadastrar(Consulta novoConsulta)
         {
-            contexto.Consultas.Add(novoConsulta);
-            contexto.SaveChanges();
+            if(novoConsulta.Medico != null){
+                contexto.Consultas.Add(novoConsulta);
+                contexto.SaveChanges();
         }
 
         public void Deletar(int idUsuario)
