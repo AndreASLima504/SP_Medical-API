@@ -122,13 +122,15 @@ DELETE FROM Clinicas
 WHERE clinicaID = 2
 go
 
-CREATE FUNCTION medicosEspecializados (@especializacao VARCHAR)
+CREATE FUNCTION medicosEspecializados (@especializacao int)
 RETURNS TABLE
 AS
 RETURN
-(
-SELECT count (medicoID)
+
+SELECT count (medicoID) as 'qtd'
 FROM Medico
 WHERE especialidadeID = @especializacao
-)
+
 GO
+
+select * from medicosEspecializados (2)

@@ -7,4 +7,11 @@ select*from Especialidades
 select*from Paciente
 select*from Consultas
 
-select count(idUsuario) from Usuario;
+select count(usuarioID) from Usuarios;
+GO
+
+CREATE PROCEDURE idadePaciente AS
+SELECT pacienteID as 'idPaciente' from Paciente
+INNER JOIN Usuarios ON Usuarios.usuarioID = paciente.usuarioID
+GO
+
