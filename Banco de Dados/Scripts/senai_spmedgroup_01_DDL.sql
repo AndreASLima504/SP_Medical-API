@@ -54,7 +54,7 @@ CREATE TABLE Medico(
 medicoID INT PRIMARY KEY IDENTITY(1,1),
 usuarioID INT NOT NULL,
 clinicaID INT FOREIGN KEY REFERENCES Clinicas,
-especialidadeID INT FOREIGN KEY REFERENCES Especialidades,
+IDespecialidade INT FOREIGN KEY REFERENCES Especialidades,
 crm VARCHAR (8))
 GO
 
@@ -121,3 +121,14 @@ GO
 DELETE FROM Clinicas
 WHERE clinicaID = 2
 go
+
+CREATE FUNCTION medicosEspecializados (@especializacao VARCHAR)
+RETURNS TABLE
+AS
+RETURN
+(
+SELECT count (medicoID)
+FROM Medico
+WHERE especialidadeID = @especializacao
+)
+GO
