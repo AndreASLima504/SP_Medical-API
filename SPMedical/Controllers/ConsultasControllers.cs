@@ -24,7 +24,7 @@ namespace SPMedical.Controllers
         {
             return Ok(_consultaRepository.ListarTodos());
         }
-
+        
         [HttpGet]
         public IActionResult BuscarPorID(int idConsulta)
         {
@@ -39,13 +39,14 @@ namespace SPMedical.Controllers
             return StatusCode(201);
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{ConsultaId}")]
         public IActionResult Deletar(int idConsulta)
         {
             _consultaRepository.Deletar(idConsulta);
             return StatusCode(201);
         }
-
+        [Authorize(Roles = "1")]
         [HttpPut("{ConsultaId}")]
         public IActionResult Atualizar(int idConsulta, Consulta consultaAtualizada)
         {

@@ -1,6 +1,6 @@
 import logo from '../../assets/logo_spmedgroup_v1.png';
 import hamburger from '../../assets/iconeBurger.png'
-import fernandoStrada from '../../assets/smiling-touching-arms-crossed-room-hospital.png'
+import fernandoStrada from '..'
 import './App.css';
 
 function App() {

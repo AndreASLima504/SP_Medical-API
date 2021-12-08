@@ -26,12 +26,6 @@ tipoUsuarioID INT PRIMARY KEY IDENTITY(1,1),
 nomeTipo VARCHAR (30))
 GO
 
-CREATE TABLE Especialidades (
-especialidadeID INT PRIMARY KEY IDENTITY(1,1),
-nomeEspecialidade VARCHAR(30));
-GO
-
-
 CREATE TABLE Usuarios (
 usuarioID INT PRIMARY KEY IDENTITY(1,1),
 tipoUsuarioID INT FOREIGN KEY REFERENCES TipoUsuario,
@@ -40,7 +34,31 @@ email VARCHAR(50),
 senha VARCHAR (30));
 GO
 
-CREATE TABLE Paciente(
+CREATE TABLE Clinicas(
+clinicaID INT PRIMARY KEY IDENTITY(1,1),
+nomeFantasia varchar (30),
+CNPJ varchar (18),
+enderecoClinica varchar(100),
+razaoSocial varchar (30),
+horarioFechamento time,
+horarioAbertura time);
+GO
+
+CREATE TABLE Especialidades (
+especialidadeID INT PRIMARY KEY IDENTITY(1,1),
+nomeEspecialidade VARCHAR(30));
+GO
+
+
+CREATE TABLE Medicos(
+medicoID INT PRIMARY KEY IDENTITY(1,1),
+usuarioID INT NOT NULL,
+clinicaID INT FOREIGN KEY REFERENCES Clinicas,
+IDespecialidade INT FOREIGN KEY REFERENCES Especialidades,
+crm VARCHAR (8))
+GO
+
+CREATE TABLE Pacientes(
 pacienteID INT PRIMARY KEY IDENTITY(1,1),
 usuarioID INT FOREIGN KEY REFERENCES Usuarios,
 dataNascimento Date,
@@ -50,14 +68,14 @@ CPFPaciente VARCHAR(14),
 enderecoPaciente VARCHAR(100));
 GO
 
-CREATE TABLE Medico(
-medicoID INT PRIMARY KEY IDENTITY(1,1),
-usuarioID INT NOT NULL,
-clinicaID INT FOREIGN KEY REFERENCES Clinicas,
-IDespecialidade INT FOREIGN KEY REFERENCES Especialidades,
-crm VARCHAR (8))
-GO
 
+CREATE TABLE Consultas(
+consultaID INT PRIMARY KEY IDENTITY(1,1),
+medicoID INT FOREIGN KEY REFERENCES Medicos,
+pacienteID INT FOREIGN KEY REFERENCES,
+dataConsulta datetime,
+descConsulta varchar (30));
+GO
 
 
 ALTER TABLE Medico
@@ -78,13 +96,6 @@ GO
 DROP TABLE Medico
 go
 
-CREATE TABLE Consultas(
-consultaID INT PRIMARY KEY IDENTITY(1,1),
-medicoID INT NOT NULL,
-pacienteID INT NOT NULL,
-dataConsulta datetime,
-descConsulta varchar (30));
-GO
 
 alter table Consultas
 ADD constraint fk_consultasMedico FOREIGN KEY (medicoID) REFERENCES Medico(medicoID)
@@ -102,15 +113,6 @@ alter table consultas
 add dataConsulta datetime NOT NULL
 GO
 
-CREATE TABLE Clinicas(
-clinicaID INT PRIMARY KEY IDENTITY(1,1),
-nomeFantasia varchar (30),
-CNPJ varchar (18),
-enderecoClinica varchar(100),
-razaoSocial varchar (30),
-horarioFechamento time,
-horarioAbertura time);
-GO
 
 
 
