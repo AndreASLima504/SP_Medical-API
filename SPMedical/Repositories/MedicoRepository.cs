@@ -29,8 +29,11 @@ namespace SPMedical.Repositories
 
         public Medico BuscarPorId(int idMedico)
         {
-            return contexto.Medicos.FirstOrDefault(m => m.MedicoId == idMedico);
-        }
+            return contexto.Medicos.Select(u => new Medico() {
+                MedicoId = u.MedicoId,
+                ClinicaId = u.ClinicaId
+
+            }
 
         public void Cadastrar(Medico novoMedico)
         {
