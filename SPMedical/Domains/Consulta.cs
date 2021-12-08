@@ -12,7 +12,7 @@ namespace SPMedical.Domains
         public int PacienteId { get; set; }
         public DateTime? DataConsulta { get; set; }
         public string DescConsulta { get; set; }
-
+        
         public virtual Medico Medico { get; set; }
         public virtual Paciente Paciente { get; set; }
     }

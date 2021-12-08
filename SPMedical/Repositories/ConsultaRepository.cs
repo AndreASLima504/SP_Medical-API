@@ -19,7 +19,7 @@ namespace SPMedical.Repositories
         public void AtualizarIdUrl(int idConsulta, Consulta consultaAtualizada)
         {
             Consulta consultaBuscada = BuscarPorId(idConsulta);
-            if(consultaAtualizada.DataConsulta != null)
+            if (consultaAtualizada.DataConsulta != null)
             {
                 consultaBuscada.DataConsulta = consultaAtualizada.DataConsulta;
             }
@@ -34,20 +34,31 @@ namespace SPMedical.Repositories
 
         public void Cadastrar(Consulta novoConsulta)
         {
-            if(novoConsulta.Medico != null){
+            if (novoConsulta.Medico != null) {
                 contexto.Consultas.Add(novoConsulta);
                 contexto.SaveChanges();
+            }
+
+            public void Deletar(int idUsuario)
+            {
+                contexto.Consultas.Remove(BuscarPorId(idUsuario));
+                contexto.SaveChanges();
+            }
+
+            public List<Consulta> ListarTodos()
+            {
+                return contexto.Consultas.ToList();
+            }
         }
 
         public void Deletar(int idUsuario)
         {
-            contexto.Consultas.Remove(BuscarPorId(idUsuario));
-            contexto.SaveChanges();
+            throw new NotImplementedException();
         }
 
         public List<Consulta> ListarTodos()
         {
-            return contexto.Consultas.ToList();
+            throw new NotImplementedException();
         }
     }
 }
