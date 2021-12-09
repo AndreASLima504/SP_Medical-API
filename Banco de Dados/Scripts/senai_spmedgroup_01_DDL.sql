@@ -3,6 +3,13 @@ GO
 USE SP_Med_GP
 GO
 
+CREATE DATABASE SP_Medical
+GO
+USE SP_Medical
+GO
+
+drop database SP_Medical
+
 DROP DATABASE SP_Med_GP
 GO
 
@@ -52,7 +59,7 @@ GO
 
 CREATE TABLE Medicos(
 medicoID INT PRIMARY KEY IDENTITY(1,1),
-usuarioID INT NOT NULL,
+usuarioID INT FOREIGN KEY REFERENCES Usuarios,
 clinicaID INT FOREIGN KEY REFERENCES Clinicas,
 IDespecialidade INT FOREIGN KEY REFERENCES Especialidades,
 crm VARCHAR (8))
@@ -72,7 +79,7 @@ GO
 CREATE TABLE Consultas(
 consultaID INT PRIMARY KEY IDENTITY(1,1),
 medicoID INT FOREIGN KEY REFERENCES Medicos,
-pacienteID INT FOREIGN KEY REFERENCES,
+pacienteID INT FOREIGN KEY REFERENCES Pacientes,
 dataConsulta datetime,
 descConsulta varchar (30));
 GO
