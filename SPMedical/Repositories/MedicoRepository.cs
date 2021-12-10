@@ -52,4 +52,19 @@ namespace SPMedical.Repositories
             return contexto.Medicos.ToList();
         }
     }
-}
+
+        public void Cadastrar(Medico novoMedico)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deletar(int idMedico)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Medico> ListarTodos()
+        {
+            throw new NotImplementedException();
+        }
+    }
