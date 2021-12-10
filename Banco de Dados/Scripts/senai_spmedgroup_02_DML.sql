@@ -41,7 +41,7 @@ insert INTO Especialidades (nomeEspecialidade)
 VALUES ('Acupuntura'), ('Anestesiologia'), ('Cirurgia Cardiovascular'), ('Cirurgia da mão'), ('Cirurgia do Aparelho Digestivo'), ('Cirurgia Geral'), ('Cirurgia Pediátrica'), ('Cirurgia Plástica'), ('Cirurgia Torácica'), ('Cirurgia Vascular'), ('Dermatologia'), ('Radioterapia'), ('Urologia'), ('Pediatria'), ('Psiquiatria')
 GO
 
-insert into Medicos(usuarioID, clinicaID, especialidadeID, crm)
+insert into Medicos(usuarioID, clinicaID, IDespecialidade, crm)
 VALUES(4, 1, 2, '54356-SP'),
 (5, 1, 15, '53452-SP'),
 (6, 1, 14, '65463-SP')
@@ -49,13 +49,13 @@ GO
 
 
 insert into Consultas(medicoID, pacienteID, dataConsulta, descConsulta)
-VALUES (5, 2, '20/1/2020 15:00:00', 'Realizada'),
-(4, 2, '06/1/2020 10:00:00', 'Cancelada'),
-(4, 3, '07/02/2020 11:00:00', 'Realizada'),
-(4, 2, '06/02/2018 10:00:00', 'Realizada'),
-(3, 9, '02/07/2019 11:00:00', 'Cancelada'),
-(5, 7, '08/03/2020 15:00:00', 'Agendada'),
-(3, 9, '09/03/2020 11:00:00', 'Agendada')
+VALUES (3, 2, '20/1/2020 15:00:00', 'Realizada'),
+(2, 2, '06/1/2020 10:00:00', 'Cancelada'),
+(2, 3, '07/02/2020 11:00:00', 'Realizada'),
+(2, 2, '06/02/2018 10:00:00', 'Realizada'),
+(1, 4, '02/07/2019 11:00:00', 'Cancelada'),
+(3, 7, '08/03/2020 15:00:00', 'Agendada'),
+(1, 4, '09/03/2020 11:00:00', 'Agendada')
 GO
 
 UPDATE Paciente
