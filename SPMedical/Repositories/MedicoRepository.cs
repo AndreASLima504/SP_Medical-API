@@ -29,11 +29,15 @@ namespace SPMedical.Repositories
 
         public Medico BuscarPorId(int idMedico)
         {
-            return contexto.Medicos.Select(u => new Medico() {
+            return contexto.Medicos.Select(u => new Medico()
+            {
                 MedicoId = u.MedicoId,
-                ClinicaId = u.ClinicaId
-
-            }
+                ClinicaId = u.ClinicaId,
+                EspecialidadeId = u.EspecialidadeId,
+                UsuarioId = u.UsuarioId,
+                Consulta = u.Consulta
+            }).FirstOrDefault(u => u.MedicoId == idMedico);
+        }
 
         public void Cadastrar(Medico novoMedico)
         {
@@ -53,18 +57,4 @@ namespace SPMedical.Repositories
         }
     }
 
-        public void Cadastrar(Medico novoMedico)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Deletar(int idMedico)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Medico> ListarTodos()
-        {
-            throw new NotImplementedException();
-        }
-    }
+}
