@@ -2,6 +2,7 @@
   text-align: center;
   background-image: url("../../assets/cheerful-diverse-friends-with-arms-around.jpg");
   /* background-image: ; */
+  background-size: cover;
 }
 
 /* .App-logo {
@@ -64,6 +65,12 @@
 }
 .senha{
   height: 40px;
+}
+
+.botaoLogin{
+  height: 50px;
+  border-radius: 24px;
+  background: #6549F2;
 }
 
 .blocoLoginContainer{
