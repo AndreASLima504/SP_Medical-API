@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+  background-image: url("../../assets/cheerful-diverse-friends-with-arms-around.jpg");
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.Logo{
+  height: 90px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.container{
+  width: 1000px;
+  /* height: 1000px; */
+  margin: auto;
+}
+
+.body{
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.blocoLogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 500px;
+  height: 650px;
+  margin: auto;
+  background-color: rgba(229, 229, 229, 0.82);
+}
+
+.formularioLogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 360px;
+}
+
+.email{
+  height: 40px;
+}
+.senha{
+  height: 40px;
+}
+
+.blocoLoginContainer{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
