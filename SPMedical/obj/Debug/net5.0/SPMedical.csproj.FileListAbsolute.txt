@@ -84,3 +84,14 @@ C:\Users\47926331848\Desktop\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical
 C:\Users\47926331848\Desktop\SP_Medical-API\SPMedical\obj\Debug\net5.0\ref\SPMedical.dll
 C:\Users\47926331848\Desktop\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.xml
 C:\Users\47926331848\Desktop\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.pdb
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.AssemblyInfoInputs.cache
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.AssemblyInfo.cs
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.dll
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\ref\SPMedical.dll
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.xml
+C:\Users\andre\Documents\SENAU\SP_Medical-API\SPMedical\obj\Debug\net5.0\SPMedical.pdb
