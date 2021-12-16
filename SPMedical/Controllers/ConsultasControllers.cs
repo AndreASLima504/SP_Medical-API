@@ -19,13 +19,13 @@ namespace SPMedical.Controllers
             _consultaRepository = new ConsultaRepository();
         }
 
-        [HttpGet]
+        [HttpGet("listar")]
         public IActionResult Listar()
         {
             return Ok(_consultaRepository.ListarTodos());
         }
         
-        [HttpGet]
+        [HttpGet("buscarporid")]
         public IActionResult BuscarPorID(int idConsulta)
         {
             return Ok(_consultaRepository.BuscarPorId(idConsulta));

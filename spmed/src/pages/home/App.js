@@ -11,12 +11,15 @@ function App() {
           <div class="divHamburger">
           <img src={hamburger} class = "hamburgerHeader"></img>
           </div>
-
+          <div class="espaco">
+          </div>
           <div class="divLogo">
           <img src={logo} alt = "logo" class = "Logo"></img>
           </div>
         </div>
       </header>
+      
+      <div class="filtro">
       <main class = "container">
         <section class="blocoLogin">
           <div class="blocoLoginContainer">
@@ -34,6 +37,7 @@ function App() {
           </div>
         </section>
       </main>
+      </div>
     </div>
   );
 }
