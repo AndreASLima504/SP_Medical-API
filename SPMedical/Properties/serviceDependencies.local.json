@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "resourceId": null,
+      "type": "mssql.local",
+      "connectionId": "DataSource=DESKTOP-BR4J4LS:SQLEXPRESS;initialcatalog=SP_Medical;userId=sa;pwd=shenna01;",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}

@@ -7,7 +7,16 @@
 	<PropertyGroup>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<NoWarn>$(NoWarn);1591</NoWarn>
+		<UserSecretsId>088e2250-face-4c1e-acb0-48296e2dcdf5</UserSecretsId>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Controllers\ClinicasControllers.cs" />
+	  <Compile Remove="Controllers\MedicosControllers.cs" />
+	  <Compile Remove="Controllers\PacientesControllers.cs" />
+	  <Compile Remove="Controllers\TipoUsuariosControllers.cs" />
+	  <Compile Remove="Controllers\UsuariosControllers.cs" />
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.10" />

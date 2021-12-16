@@ -9,6 +9,7 @@
   height: 40vmin;
   pointer-events: none;
 } */
+
 .Logo{
   height: 50px;
 }
@@ -34,7 +35,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 90px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +43,21 @@
   color: white;
   
 }
+
+.containerHeader{
+  display: flex;
+  height: 100%;
+  width: 900px;
+  margin: auto;
+  align-items: center;
+}
+
+/* .divLogo{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: auto;
+} */
 
 .blocoLogin{
   display: flex;
@@ -76,6 +92,24 @@
 .blocoLoginContainer{
   margin-left: 50px;
   margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.linksRelacionadosLogin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  justify-content: space-between;
+}
+
+.esqueceuasenha{
+  text-decoration: none;
+}
+
+.naotemumaconta{
+  text-decoration: none;
 }
 
 .App-link {

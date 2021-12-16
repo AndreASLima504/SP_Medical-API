@@ -7,22 +7,29 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={hamburger} class = "hamburgerHeader"></img>
-        <img src={logo} alt = "logo" class = "Logo"></img>
+        <div class="containerHeader">
+          <div class="divHamburger">
+          <img src={hamburger} class = "hamburgerHeader"></img>
+          </div>
+
+          <div class="divLogo">
+          <img src={logo} alt = "logo" class = "Logo"></img>
+          </div>
+        </div>
       </header>
       <main class = "container">
         <section class="blocoLogin">
           <div class="blocoLoginContainer">
             <div class="formularioLogin">
               <span>FAÇA SEU LOGIN</span>
-            <input type = "email" placeholder = "Email" class="email"></input>
+              <input type = "email" placeholder = "Email" class="email"></input>
               <input type = "password" placeholder = "Senha" class="senha"></input>
               <button class="botaoLogin">Login</button>
             </div>
-            <div>
-              <a href="">Esqueceu a senha?</a>
+            <div class="linksRelacionadosLogin">
+              <a href="" class="esqueceuasenha">Esqueceu a senha?</a>
               <hr></hr>
-              <a href="">Não tem uma conta?</a>
+              <a href="" class="naotemumaconta">Não tem uma conta?</a>
             </div>
           </div>
         </section>

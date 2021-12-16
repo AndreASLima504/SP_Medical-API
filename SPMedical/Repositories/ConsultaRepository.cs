@@ -39,6 +39,7 @@ namespace SPMedical.Repositories
                 contexto.SaveChanges();
             }
 
+        }
             public void Deletar(int idUsuario)
             {
                 contexto.Consultas.Remove(BuscarPorId(idUsuario));
@@ -49,16 +50,7 @@ namespace SPMedical.Repositories
             {
                 return contexto.Consultas.ToList();
             }
-        }
 
-        public void Deletar(int idUsuario)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Consulta> ListarTodos()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
