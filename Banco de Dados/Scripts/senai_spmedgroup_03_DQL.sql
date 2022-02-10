@@ -1,7 +1,7 @@
 select * from Usuarios
 select*from TipoUsuario
-select*from Medicos
-select*from Pacientes
+select*from Medico
+select*from Paciente
 select*from Clinicas
 select*from Especialidades
 select*from Consultas

@@ -41,7 +41,7 @@ insert INTO Especialidades (nomeEspecialidade)
 VALUES ('Acupuntura'), ('Anestesiologia'), ('Cirurgia Cardiovascular'), ('Cirurgia da mão'), ('Cirurgia do Aparelho Digestivo'), ('Cirurgia Geral'), ('Cirurgia Pediátrica'), ('Cirurgia Plástica'), ('Cirurgia Torácica'), ('Cirurgia Vascular'), ('Dermatologia'), ('Radioterapia'), ('Urologia'), ('Pediatria'), ('Psiquiatria')
 GO
 
-insert into Medicos(usuarioID, clinicaID, IDespecialidade, crm)
+insert into Medico(usuarioID, clinicaID, especialidadeID, crm)
 VALUES(4, 1, 2, '54356-SP'),
 (5, 1, 15, '53452-SP'),
 (6, 1, 14, '65463-SP')
